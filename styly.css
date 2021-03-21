@@ -1,3 +1,27 @@
 h1 {
     font-family: 'Lobster', cursive;
+    font-size: 50px; 
+}
+
+body { 
+background: linear-gradient(#615dad,#ffc8da);
+margin: 60px;
+padding-left: 430px;
+color: #ffffff;
+font-size: 25px;
+width: 500px;
+text-align: center;
+display: block;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+    margin: 10px;
 }
