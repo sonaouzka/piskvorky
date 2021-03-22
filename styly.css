@@ -7,7 +7,7 @@ h1 {
 }   
 
 body { 
-font-family: sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 background: linear-gradient(#615dad,#ffc8da);
 margin: 60px;
 padding-left: 430px;
@@ -15,7 +15,7 @@ color: #ffffff;
 font-size: 19px;
 width: 450px;
 text-align: center;
-display: block;
+/* display: block; */
 }
 
 img {
@@ -23,31 +23,48 @@ img {
     border-radius: 6px 6px 0 0;
 }
 
-ul {
+.kontejner {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ul {
 	list-style-type: none;
     padding-left:0;
-}
+} */
 
-li {
+/* li {
     padding: 15px;
-}
+} */
 
-p {
+.text {
     background-color: #283e50;
     margin: 0;
     padding:0 15px 40px 15px;
 }
 
+
+.tlacitka {
+    display: flex;
+    flex-direction: column;
+}
+
 .pravidla {
     background-color: #1fcca4;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px #283e50;
 }
 
 .hrat {
     background-color: #0197f6;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 a {
 text-decoration: none;
 color: #ffffff;
 }
+
 
