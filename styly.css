@@ -6,6 +6,7 @@ h1 {
     padding:30px 0;
 }   
 
+
 body { 
 font-family: Arial, Helvetica, sans-serif;
 background: linear-gradient(#615dad,#ffc8da);
@@ -15,12 +16,15 @@ color: #ffffff;
 font-size: 19px;
 width: 450px;
 text-align: center;
-/* display: block; */
 }
 
 img {
-    width: 100%;
     border-radius: 6px 6px 0 0;
+    width: 100%;
+}
+
+.obrazek {
+    font-size: 0px;
 }
 
 .kontejner {
@@ -28,14 +32,11 @@ img {
     flex-direction: column;
 }
 
-/* ul {
-	list-style-type: none;
-    padding-left:0;
-} */
 
-/* li {
-    padding: 15px;
-} */
+.obrazek {
+    font-size: 0px;
+}
+
 
 .text {
     background-color: #283e50;
@@ -49,6 +50,7 @@ img {
     flex-direction: column;
 }
 
+
 .pravidla {
     background-color: #1fcca4;
     padding-top: 15px;
@@ -56,11 +58,20 @@ img {
     border-bottom: solid 1px #283e50;
 }
 
+.pravidla:hover {
+    background-color: #1cbb96;
+}
+
 .hrat {
     background-color: #0197f6;
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+.hrat:hover {
+    background-color: #0090e9;
+}
+
 
 a {
 text-decoration: none;
