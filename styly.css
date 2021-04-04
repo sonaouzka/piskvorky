@@ -117,3 +117,36 @@ figure {
   margin: 0 0 40px 0;
   padding: 0;
 }
+
+figcaption {
+    text-align: center;
+}
+
+@media (min-width: 650px) {
+ .vysvetleni {
+    width: 640px;
+}
+
+.obrazky {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+ figure {
+  width: calc(100% / 2.2);
+}
+
+h1 {
+    text-align: center;
+}
+
+.seznam {
+    text-align: left;
+}
+
+figcaption {
+    font-size: 12px;
+}
+
+}
