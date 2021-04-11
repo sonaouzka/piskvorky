@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-    min-height: 100%; /*prenastavenie gradientu na celej stránku i pre Pravidla*/
+    min-height: 100%; /*prenastavenie gradientu na celej stránku i pre Pravidla nebo použít min-height:100vh v body*/
   }
 
   *,
@@ -62,6 +62,7 @@ margin-top: 5%;
 
 .pravidla,
 .stranka_uvod {
+    height: 50px;
     background-color: #1fcca4;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -74,6 +75,7 @@ margin-top: 5%;
 }
 
 .hrat {
+    height: 50px;
     background-color: #0197f6;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -93,12 +95,16 @@ color: #ffffff;
     background-color: #283e50;
     display: flex;
     flex-direction: column;
-    padding: 50px;
     border-radius: 6px 6px 0 0;
 }
 
 img {
     width: 100%;
+}
+
+.obrazky,
+.seznam {
+    margin:30px;
 }
 
 .cross,
@@ -150,6 +156,4 @@ h1 {
 figcaption {
     font-size: 12px;
 }
-
-
 }
