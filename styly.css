@@ -28,8 +28,8 @@ background-repeat: no-repeat;
 /* height: 100vh;  */
 color: #ffffff;
 font-size: 18px;
-font-weight: normal;
 width: 400px;
+font-weight: normal;
 text-align: center;
 position: relative;
 left: calc(50% - 400px / 2);
@@ -45,6 +45,9 @@ margin-top: 5%;
 .kontejnerUvod {
     display: flex;
     flex-direction: column;
+    /* text-align: center;
+    display: block;
+    width: 400px; */
 }
 
 
@@ -92,7 +95,7 @@ text-decoration: none;
 color: #ffffff;
 }
 
-.vysvetleni {
+.kontejnerPravidla {
     background-color: #283e50;
     display: flex;
     flex-direction: column;
@@ -130,16 +133,8 @@ figcaption {
     text-align: center;
 }
 
-
-.nadpisHraciPlocha {
-    font-family: 'Lobster', cursive;
-    font-size: 70px; 
-    font-weight: normal;
-}
-
-
 @media (min-width: 650px) {
- .vysvetleni {
+ .kontejnerPravidla {
     width: 640px;
     position: relative;
     left: calc(50% - 640px / 2);
@@ -168,3 +163,81 @@ figcaption {
 }
 }
 
+
+/* 3.úkol */
+
+.nadpisHraciPlocha {
+    font-family: 'Lobster', cursive;
+    font-size: 65px; 
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+.kontejnerHra {
+    max-width: 80vmin;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.ikony{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.ikony__home {
+    width: 2.5rem;
+    background-color: #1cbb96;
+    padding: 5px;
+    margin-right: 15px;
+    border-radius: 3px;
+}
+
+
+.ikony__restart {
+    width: 2.5rem;
+    background-color: #0197f6;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.kdoHrajePopis {
+ margin-bottom: 10px;
+}
+
+
+.mrizka {
+    max-width: 80vmin;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1.5px solid black;
+    font-size: 0px;
+}
+
+button {
+    width: calc(100% / 10);
+    height: 8vmin;
+    margin: 0;
+    padding: 0;
+    opacity: 0.3;
+    border: 1.5px solid black;
+}
+
+button:hover,
+button:focus {
+   opacity: 0.5;
+}
