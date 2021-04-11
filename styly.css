@@ -1,7 +1,7 @@
 html {
     box-sizing: border-box;
     min-height: 100%; /*prenastavenie gradientu na celej stránku i pre Pravidla nebo použít min-height:100vh v body*/
-  }
+}
 
   *,
   ::after,
@@ -9,7 +9,8 @@ html {
     box-sizing: inherit;
   }
 
-h1 {
+.nadpisPravidla,
+.nadpisPiskvorky {
     font-family: 'Lobster', cursive;
     font-size: 50px; 
     font-weight: normal;
@@ -23,7 +24,8 @@ body {
 font-family: Arial, Helvetica, sans-serif;
 background: linear-gradient(#615dad,#ffc8da);
 background-size: cover;
-/* height: 100vh; */
+background-repeat: no-repeat;
+/* height: 100vh;  */
 color: #ffffff;
 font-size: 18px;
 font-weight: normal;
@@ -31,9 +33,8 @@ width: 400px;
 text-align: center;
 position: relative;
 left: calc(50% - 400px / 2);
-margin-top: 5%;
+margin-top: 5%; 
 }
-
 
 .uvodni {
     font-size: 0px;
@@ -41,7 +42,7 @@ margin-top: 5%;
     width: 100%;
 }
 
-.kontejner {
+.kontejnerUvod {
     display: flex;
     flex-direction: column;
 }
@@ -96,6 +97,7 @@ color: #ffffff;
     display: flex;
     flex-direction: column;
     border-radius: 6px 6px 0 0;
+    overflow: hidden;
 }
 
 img {
@@ -128,6 +130,14 @@ figcaption {
     text-align: center;
 }
 
+
+.nadpisHraciPlocha {
+    font-family: 'Lobster', cursive;
+    font-size: 70px; 
+    font-weight: normal;
+}
+
+
 @media (min-width: 650px) {
  .vysvetleni {
     width: 640px;
@@ -157,3 +167,4 @@ figcaption {
     font-size: 12px;
 }
 }
+
