@@ -111,11 +111,14 @@ img {
     margin:30px;
 }
 
+.kdoHrajeImg,
 .cross,
 .circle {
     width: 1em;
     height: 1em;
     filter: invert(100%);
+    vertical-align: -0.1em;
+
 }
 
 li {
@@ -162,7 +165,7 @@ figcaption {
 }
 }
 
-
+/* ..................... */
 /* 3.úkol */
 
 .nadpisHraciPlocha {
@@ -250,4 +253,23 @@ button:focus {
 
 .ikony__restart:hover {
     background-color: #0090e9;
+}
+
+/* ....................
+4.úkol */
+
+.mrizka--circle {
+    background-image: url('circle.svg');
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+
+.mrizka--cross {
+    background-image: url('cross.svg');
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
