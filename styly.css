@@ -170,7 +170,7 @@ figcaption {
 
 .nadpisHraciPlocha {
     font-family: 'Lobster', cursive;
-    font-size: 65px; 
+    font-size: 60px; 
     font-weight: normal;
     margin-top: 0px;
 }
@@ -263,6 +263,8 @@ button:focus {
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
+    animation-name: gradual-growth;
+    animation-duration: 0.15s;
     
 }
 
@@ -272,4 +274,16 @@ button:focus {
     background-size: 65%;
     background-repeat: no-repeat;
     background-position: center;
+    animation-name: gradual-growth;
+    animation-duration: 0.15s;
+}
+
+@keyframes gradual-growth {
+    0% {
+        background-size: 0%;
+    }
+
+    100% {
+        background-size: 65%;
+    }
 }
