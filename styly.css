@@ -229,7 +229,7 @@ figcaption {
     width: 100%;
     font-size: 0px;
     border-color: #2a3035;
-    border-width: 2px;
+    border-width: 1.5px;
 }
 
 button {
@@ -237,14 +237,14 @@ button {
     height: 8vmin;
     margin: 0;
     padding: 0;
-    opacity: 0.3;
     border-color: #2a3035;
-    border-width: 2px;
+    border-width: 1.5px;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 button:hover,
 button:focus {
-   opacity: 0.5;
+   background-color: rgba(255, 255, 255, 0.5);
 }
 
 .ikony__home:hover {
