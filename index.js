@@ -1,22 +1,90 @@
 'use strict'
 console.log("funguju");
 
-let naTahu = 'circle';
+// ................4.úkol...............
 
-const hraButtonElm = document.querySelector('.mrizka');
-const kdoHrajeElm = document.querySelector('.kdoHrajeImg');
+let yourTurn = 'circle';
 
-hraButtonElm.addEventListener('click', (event) => {
-  if (naTahu === 'circle') {
-    event.target.classList.add('mrizka--circle');
-    kdoHrajeElm.src = 'cross.svg';
+const boardFieldsElm = document.querySelectorAll('.board__field');
+const whoPlaysElm = document.querySelector('.kdoHrajeImg');
+
+
+const boardFieldSelect = (event) => {
+  if (yourTurn === 'circle') {
+    event.target.classList.add('board__field--circle');
+    whoPlaysElm.src = 'cross.svg';
     event.target.disabled = true;
-    naTahu = 'cross';
+    yourTurn = 'cross';
 
-  } else if (naTahu === 'cross') {
-    event.target.classList.add('mrizka--cross');
-    kdoHrajeElm.src = 'circle.svg';
-    event.target.disabled = true;
-    naTahu = 'circle';
+  if (isWinningMove(event.target)) {
+    setTimeout(() => {
+      let confirmation = confirm('Vyhrál hráč s kolečkem. Chcete hrát znovu?');
+      if (confirmation === true) {
+        location.reload();
+      }
+    }, 300);
   }
-});
+
+  } else {
+    event.target.classList.add('board__field--cross');
+    whoPlaysElm.src = 'circle.svg';
+    event.target.disabled = true;
+    yourTurn = 'circle';
+
+  if (isWinningMove(event.target)) {
+    setTimeout(() => {
+      let confirmation = confirm('Vyhrál hráč s křížkem. Chcete hrát znovu?');
+      if (confirmation === true) {
+        location.reload();
+      }
+    }, 300);
+  }
+  }
+}
+
+for (let i = 0; i < boardFieldsElm.length; i ++) {
+  boardFieldsElm[i].addEventListener('click', boardFieldSelect);
+}
+
+  // if (isWinningMove(event.target)) {
+  //   setTimeout(() => {
+  //     if (yourTurn === 'circle') {
+  //       confirm('Vyhrává hráč s křížkem. Spustit novou hru?');
+  //       location.reload();
+  //     } else {
+  //       confirm('Vyhrává hráč s kolečkem. Spustit novou hru?');
+  //       location.reload();
+  //     }
+  //   }, 300)
+  // }
+
+
+
+// ................5.úkol...............
+
+const getSymbol = (field) => {
+	if (field.classList.contains('board__field--cross')) {
+		return 'cross'
+	} else if (field.classList.contains('board__field--circle')) {
+		return 'circle'
+	}
+  
+}
+
+const boardSize = 10;
+const fields = document.querySelectorAll('.board__field');
+
+const getField = (row, column) => fields[row * boardSize + column];
+
+const getPosition = (field) => {
+  let fieldIndex = 0;
+  while (fieldIndex < boardFieldsElm.length && field !== fields[fieldIndex]) {
+		fieldIndex++;
+	}
+  return {
+		row: Math.floor(fieldIndex / boardSize),
+		column: fieldIndex % boardSize,
+	};
+
+};
+

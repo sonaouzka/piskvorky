@@ -258,7 +258,7 @@ button:focus {
 /* ....................
 4.úkol */
 
-.mrizka--circle {
+.board__field--circle {
     background-image: url('circle.svg');
     background-size: 65%;
     background-repeat: no-repeat;
@@ -269,7 +269,7 @@ button:focus {
 }
 
 
-.mrizka--cross {
+.board__field--cross {
     background-image: url('cross.svg');
     background-size: 65%;
     background-repeat: no-repeat;
